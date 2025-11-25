@@ -1,67 +1,210 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARENA LOUNGE - Mazamet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+        header {
+            background: #001c54;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background: white;
+        }
+        .hero img {
+            width: 50%;
+            border-radius: 14px;
+        }
+        .hero-text {
+            width: 40%;
+            padding: 20px;
+        }
+        .hero-text h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background: #c62828;
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .section {
+            padding: 60px 40px;
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #001c54;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+    <h1>ARENA LOUNGE</h1>
+    <nav>
+        <a href="#specialites">Spécialités</a>
+        <a href="#produits">Produits</a>
+        <a href="#offres">Offres</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<section class="hero">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1" alt="Arena Lounge">
+    <div class="hero-text">
+        <h2>Votre espace gourmand & détente à Mazamet</h2>
+        <p>Découvrez une cuisine généreuse, savoureuse et une ambiance familiale chaleureuse.</p>
+        <a href="#contact" class="btn">Réserver Maintenant</a>
     </div>
-  </section>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<section class="section" id="specialites">
+    <h2>Nos Spécialités</h2>
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" alt="Hot dogs">
+            <h3>Hot-dogs Signature</h3>
+            <p>Nos hot-dogs gourmands à l’américaine, servis avec sauces maison.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg" alt="Burgers et snacks">
+            <h3>Burgers & Snacks Premium</h3>
+            <p>Des recettes généreuses, préparées avec des ingrédients frais.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.ctfassets.net/6zncp07wiqyq/79ILnGDwHsvNO5tAiMIstx/7bc77dce632108585571afac793a4a17/training_masterclass-webinars_menu-and-flavours_spirits-and-food-masterclass-webinar_header.png_.png" alt="Cocktails">
+            <h3>Cocktails & Drinks</h3>
+            <p>Un choix varié de cocktails classiques & créations originales.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="produits">
+    <h2>Produits les plus populaires</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" alt="Hot Dog Classique">
+            <h3>Menu Hot-Dog Classique</h3>
+            <p>Hot-dog brioché avec garniture fraîche.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg" alt="Snack">
+            <h3>Menu Snack Complet</h3>
+            <p>Tenders, frites, boisson et sauce maison.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91" alt="Cocktails Pack">
+            <h3>Pack Cocktails Maison</h3>
+            <p>Un assortiment de cocktails frais pour vos soirées.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="offres">
+    <h2>Offres du moment</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg" alt="Formule Duo">
+            <h3>Formule Duo</h3>
+            <p>2 Burgers + 2 Boissons + 1 Dessert à partager.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91" alt="Happy Hour">
+            <h3>Happy Hour</h3>
+            <p>Tous les jours de 18h à 20h : cocktails à prix réduit.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="galerie">
+    <h2>Galerie Photos</h2>
+    <div class="gallery">
+        <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
+        <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1">
+    </div>
+</section>
+
+<footer id="contact">
+    <h2>Contact & Réservations</h2>
+    <p>📍 1 Avenue Jean Mermoz, 81200 Mazamet – Occitanie</p>
+    <p>📞 +33 7 80 89 74 23</p>
+    <p>📧 info@golriva.pw</p>
+    <p>© 2025 ARENA LOUNGE – Tous droits réservés.</p>
+</footer>
+
 </body>
 </html>
