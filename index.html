@@ -1,103 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARENA LOUNGE - Mazamet</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARENA LOUNGE</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: "Inter", sans-serif;
-            background: #f5f5f5;
-            color: #222;
+            background: #f7f7f7;
         }
+
+        /* TOP BAR */
         header {
-            background: #001c54;
-            color: white;
-            padding: 20px 40px;
+            background: #003b95;
+            padding: 18px 45px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 26px;
-            letter-spacing: 1px;
-        }
-        nav a {
             color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 600;
         }
+
+        header nav a {
+            color: white;
+            margin-left: 25px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* HERO */
         .hero {
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 60px 20px;
+            padding: 50px;
             background: white;
         }
+
         .hero img {
             width: 50%;
-            border-radius: 14px;
+            border-radius: 10px;
         }
+
         .hero-text {
-            width: 40%;
-            padding: 20px;
+            width: 50%;
+            padding: 20px 40px;
         }
-        .hero-text h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #002f6c;
         }
-        .btn {
-            padding: 12px 25px;
-            background: #c62828;
+
+        .btn-red {
+            background: #d62828;
             color: white;
-            border-radius: 6px;
-            font-weight: 600;
+            padding: 14px 28px;
+            font-weight: 700;
+            border-radius: 5px;
             text-decoration: none;
         }
+
+        /* SECTION TITLES */
         .section {
             padding: 60px 40px;
         }
+
         .section h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #002f6c;
         }
-        .cards {
+
+        /* PRODUCT GRID */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
+
         .card {
             background: white;
-            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
+
         .card img {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 10px;
             margin-bottom: 15px;
         }
-        footer {
-            background: #001c54;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
+
+        .badge {
+            background: #ffe600;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
         }
+
+        /* GALLERY */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
         }
+
         .gallery img {
             width: 100%;
             border-radius: 12px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #003b95;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -105,86 +129,86 @@
 <body>
 
 <header>
-    <h1>ARENA LOUNGE</h1>
+    <h2>ARENA LOUNGE</h2>
     <nav>
         <a href="#specialites">Spécialités</a>
         <a href="#produits">Produits</a>
-        <a href="#offres">Offres</a>
+        <a href="#offers">Offres</a>
         <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1" alt="Arena Lounge">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1" alt="ARENA LOUNGE">
     <div class="hero-text">
-        <h2>Votre espace gourmand & détente à Mazamet</h2>
-        <p>Découvrez une cuisine généreuse, savoureuse et une ambiance familiale chaleureuse.</p>
-        <a href="#contact" class="btn">Réserver Maintenant</a>
+        <h1>Restaurant & Lounge à Mazamet</h1>
+        <p>Hot-dogs, burgers, cocktails et ambiance familiale.</p>
+        <a href="#contact" class="btn-red">Réserver Maintenant</a>
     </div>
 </section>
 
 <section class="section" id="specialites">
     <h2>Nos Spécialités</h2>
-    <div class="cards">
-
+    <div class="grid">
         <div class="card">
-            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" alt="Hot dogs">
-            <h3>Hot-dogs Signature</h3>
-            <p>Nos hot-dogs gourmands à l’américaine, servis avec sauces maison.</p>
+            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" />
+            <h3>Hot-Dogs Signature</h3>
+            <p>Un goût authentique et généreux.</p>
         </div>
 
         <div class="card">
-            <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg" alt="Burgers et snacks">
-            <h3>Burgers & Snacks Premium</h3>
-            <p>Des recettes généreuses, préparées avec des ingrédients frais.</p>
+            <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg" />
+            <h3>Burgers Premium</h3>
+            <p>Fraîcheur, qualité et saveur.</p>
         </div>
 
         <div class="card">
-            <img src="https://images.ctfassets.net/6zncp07wiqyq/79ILnGDwHsvNO5tAiMIstx/7bc77dce632108585571afac793a4a17/training_masterclass-webinars_menu-and-flavours_spirits-and-food-masterclass-webinar_header.png_.png" alt="Cocktails">
-            <h3>Cocktails & Drinks</h3>
-            <p>Un choix varié de cocktails classiques & créations originales.</p>
+            <img src="https://images.ctfassets.net/6zncp07wiqyq/79ILnGDwHsvNO5tAiMIstx/7bc77dce632108585571afac793a4a17/training_masterclass-webinars_menu-and-flavours_spirits-and-food-masterclass-webinar_header.png_.png" />
+            <h3>Cocktails Maison</h3>
+            <p>Créations fraîches & raffinées.</p>
         </div>
-
     </div>
 </section>
 
 <section class="section" id="produits">
-    <h2>Produits les plus populaires</h2>
-    <div class="cards">
+    <h2>Produits les Plus Populaires</h2>
+    <div class="grid">
+
         <div class="card">
-            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" alt="Hot Dog Classique">
+            <span class="badge">Best Seller</span>
+            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50">
             <h3>Menu Hot-Dog Classique</h3>
-            <p>Hot-dog brioché avec garniture fraîche.</p>
         </div>
 
         <div class="card">
-            <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg" alt="Snack">
+            <span class="badge">Best Seller</span>
+            <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg">
             <h3>Menu Snack Complet</h3>
-            <p>Tenders, frites, boisson et sauce maison.</p>
         </div>
 
         <div class="card">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91" alt="Cocktails Pack">
+            <span class="badge">Best Seller</span>
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91">
             <h3>Pack Cocktails Maison</h3>
-            <p>Un assortiment de cocktails frais pour vos soirées.</p>
         </div>
+
     </div>
 </section>
 
-<section class="section" id="offres">
-    <h2>Offres du moment</h2>
-    <div class="cards">
+<section class="section" id="offers">
+    <h2>Offres du Moment</h2>
+    <div class="grid">
         <div class="card">
-            <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg" alt="Formule Duo">
+            <span class="badge">Limited Offer</span>
+            <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
             <h3>Formule Duo</h3>
-            <p>2 Burgers + 2 Boissons + 1 Dessert à partager.</p>
         </div>
 
         <div class="card">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91" alt="Happy Hour">
+            <span class="badge">Limited Offer</span>
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91">
             <h3>Happy Hour</h3>
-            <p>Tous les jours de 18h à 20h : cocktails à prix réduit.</p>
         </div>
     </div>
 </section>
@@ -192,15 +216,15 @@
 <section class="section" id="galerie">
     <h2>Galerie Photos</h2>
     <div class="gallery">
-        <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
         <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg">
         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1">
+        <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
     </div>
 </section>
 
 <footer id="contact">
-    <h2>Contact & Réservations</h2>
-    <p>📍 1 Avenue Jean Mermoz, 81200 Mazamet – Occitanie</p>
+    <h2>Contact</h2>
+    <p>📍 1 Avenue Jean Mermoz, 81200 Mazamet</p>
     <p>📞 +33 7 80 89 74 23</p>
     <p>📧 info@golriva.pw</p>
     <p>© 2025 ARENA LOUNGE – Tous droits réservés.</p>
