@@ -3,232 +3,474 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARENA LOUNGE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>ARENA LOUNGE - Restaurant & Lounge</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: "Inter", sans-serif;
-            background: #f7f7f7;
+        :root {
+            --brown-dark: #3f1c12;
+            --brown-main: #7a3b24;
+            --accent: #e46a35;
+            --light: #fff6ed;
+            --text-main: #1d1d1d;
         }
 
-        /* TOP BAR */
-        header {
-            background: #003b95;
-            padding: 18px 45px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--brown-main);
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Layout container */
+        .page-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 40px rgba(0,0,0,0.25);
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            position: relative;
+            background-image:
+                linear-gradient(120deg, rgba(0,0,0,0.75), rgba(0,0,0,0.4)),
+                url("https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 26px 60px 80px;
+        }
+
+        .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
+            margin-bottom: 70px;
         }
 
-        header nav a {
-            color: white;
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: #fff;
             margin-left: 25px;
-            font-weight: 600;
-            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        /* HERO */
-        .hero {
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero-content {
             display: flex;
             align-items: center;
-            padding: 50px;
-            background: white;
-        }
-
-        .hero img {
-            width: 50%;
-            border-radius: 10px;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .hero-text {
-            width: 50%;
-            padding: 20px 40px;
+            flex: 1 1 320px;
         }
 
-        .hero-text h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-            color: #002f6c;
+        .hero-kicker {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 12px;
         }
 
-        .btn-red {
-            background: #d62828;
-            color: white;
-            padding: 14px 28px;
-            font-weight: 700;
-            border-radius: 5px;
-            text-decoration: none;
+        .hero-title {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 18px;
         }
 
-        /* SECTION TITLES */
-        .section {
-            padding: 60px 40px;
+        .hero-sub {
+            font-size: 15px;
+            color: #fcefe6;
+            margin-bottom: 26px;
+            max-width: 420px;
         }
 
-        .section h2 {
-            font-size: 30px;
-            margin-bottom: 25px;
-            color: #002f6c;
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
         }
 
-        /* PRODUCT GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+        .btn-primary,
+        .btn-ghost {
+            padding: 12px 26px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
         }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
         }
 
-        .card img {
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .hero-side {
+            flex: 1 1 320px;
+        }
+
+        .hero-side-img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            border-radius: 18px;
+            border: 3px solid rgba(255,255,255,0.7);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .badge {
-            background: #ffe600;
-            padding: 6px 12px;
+        /* ---------- TOP PRODUCTS ---------- */
+        .section {
+            padding: 60px 50px;
+        }
+
+        .section-light {
+            background: #ffffff;
+        }
+
+        .section-soft {
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 35px;
+        }
+
+        .top-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: #171515;
+            color: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .product-body {
+            padding: 16px 18px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .product-price {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .product-name {
+            font-size: 14px;
+        }
+
+        .product-footer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-add {
             font-size: 13px;
-            font-weight: 700;
-            border-radius: 4px;
-            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: none;
+            background: var(--accent);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* ---------- PROMO BANNER ---------- */
+        .promo-banner {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .promo-text {
+            flex: 1 1 260px;
+            padding: 30px;
+            background: linear-gradient(120deg, rgba(63,28,18,0.95), rgba(122,59,36,0.85));
+        }
+
+        .promo-text h3 {
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
-        /* GALLERY */
-        .gallery {
+        .promo-text p {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .promo-img {
+            flex: 1 1 260px;
+            background-image:
+                linear-gradient(120deg, rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+                url("https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91");
+            background-size: cover;
+            background-position: center;
+            min-height: 220px;
+        }
+
+        /* ---------- EXPLORE MORE ---------- */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .tab-pill {
+            padding: 6px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            border: 1px solid #d9d9d9;
+            cursor: pointer;
+        }
+
+        .tab-pill.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .explore-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 18px;
         }
 
-        .gallery img {
+        .explore-grid img {
             width: 100%;
-            border-radius: 12px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px;
         }
 
-        /* FOOTER */
+        /* ---------- FOOTER ---------- */
         footer {
-            background: #003b95;
-            color: white;
-            padding: 40px 20px;
+            background: var(--brown-dark);
+            color: #f6e2d2;
+            padding: 40px 40px 30px;
             text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        footer a {
+            color: #f6e2d2;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px 20px 60px;
+            }
+            .section {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
+<div class="page-wrap">
 
-<header>
-    <h2>ARENA LOUNGE</h2>
-    <nav>
-        <a href="#specialites">Spécialités</a>
-        <a href="#produits">Produits</a>
-        <a href="#offers">Offres</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1" alt="ARENA LOUNGE">
-    <div class="hero-text">
-        <h1>Restaurant & Lounge à Mazamet</h1>
-        <p>Hot-dogs, burgers, cocktails et ambiance familiale.</p>
-        <a href="#contact" class="btn-red">Réserver Maintenant</a>
-    </div>
-</section>
-
-<section class="section" id="specialites">
-    <h2>Nos Spécialités</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" />
-            <h3>Hot-Dogs Signature</h3>
-            <p>Un goût authentique et généreux.</p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="nav">
+            <div class="logo">ARENA LOUNGE</div>
+            <div class="nav-links">
+                <a href="#top-products">Carte</a>
+                <a href="#promo">Offres</a>
+                <a href="#explore">Galerie</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg" />
-            <h3>Burgers Premium</h3>
-            <p>Fraîcheur, qualité et saveur.</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-kicker">Restaurant & Lounge – Mazamet</div>
+                <h1 class="hero-title">Sweet Treats, Perfect Eats<br>Ambiance Familiale</h1>
+                <p class="hero-sub">
+                    Hot-dogs, burgers, snacks et cocktails maison servis dans une atmosphère chaleureuse
+                    et conviviale, idéale pour la famille et les amis.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('top-products').scrollIntoView({behavior:'smooth'});">
+                        Commander Maintenant
+                    </button>
+                    <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-side">
+                <img class="hero-side-img"
+                     src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1"
+                     alt="Assiette gourmande ARENA LOUNGE" />
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP PRODUCTS -->
+    <section class="section section-light" id="top-products">
+        <h2 class="section-title">Top Produits</h2>
+
+        <div class="top-products-grid">
+            <div class="product-card">
+                <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50"
+                     alt="Hot-dog gourmet">
+                <div class="product-body">
+                    <div class="product-price">8,50 €</div>
+                    <div class="product-name">Hot-dog Gourmet Arena</div>
+                    <div class="product-footer">
+                        <span style="font-size:12px;opacity:0.8;">Pain brioché, saucisse, pickles, sauces maison.</span>
+                        <button class="product-add">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg"
+                     alt="Burger">
+                <div class="product-body">
+                    <div class="product-price">12,90 €</div>
+                    <div class="product-name">Burger Signature Arena</div>
+                    <div class="product-footer">
+                        <span style="font-size:12px;opacity:0.8;">Steak frais, fromage fondant, frites dorées.</span>
+                        <button class="product-add">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg"
+                     alt="Snack">
+                <div class="product-body">
+                    <div class="product-price">10,50 €</div>
+                    <div class="product-name">Menu Snack Complet</div>
+                    <div class="product-footer">
+                        <span style="font-size:12px;opacity:0.8;">Tenders, frites, sauce & boisson.</span>
+                        <button class="product-add">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.ctfassets.net/6zncp07wiqyq/79ILnGDwHsvNO5tAiMIstx/7bc77dce632108585571afac793a4a17/training_masterclass-webinars_menu-and-flavours_spirits-and-food-masterclass-webinar_header.png_.png"
+                     alt="Cocktail">
+                <div class="product-body">
+                    <div class="product-price">7,90 €</div>
+                    <div class="product-name">Cocktail Maison Arena</div>
+                    <div class="product-footer">
+                        <span style="font-size:12px;opacity:0.8;">Création fraîche & fruitée.</span>
+                        <button class="product-add">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="section section-soft" id="promo">
+        <div class="promo-banner">
+            <div class="promo-text">
+                <h3>-20% sur votre première commande</h3>
+                <p>
+                    Pour toute première visite à ARENA LOUNGE, profitez d’une remise exceptionnelle
+                    sur votre addition. Mentionnez l’offre à votre arrivée !
+                </p>
+                <button class="btn-primary">Profiter de l’offre</button>
+            </div>
+            <div class="promo-img"></div>
+        </div>
+    </section>
+
+    <!-- EXPLORE MORE -->
+    <section class="section section-light" id="explore">
+        <h2 class="section-title">Explorez Plus de Saveurs</h2>
+
+        <div class="tabs">
+            <div class="tab-pill active">Burgers</div>
+            <div class="tab-pill">Hot-dogs</div>
+            <div class="tab-pill">Snacks</div>
+            <div class="tab-pill">Cocktails</div>
+            <div class="tab-pill">Desserts</div>
         </div>
 
-        <div class="card">
-            <img src="https://images.ctfassets.net/6zncp07wiqyq/79ILnGDwHsvNO5tAiMIstx/7bc77dce632108585571afac793a4a17/training_masterclass-webinars_menu-and-flavours_spirits-and-food-masterclass-webinar_header.png_.png" />
-            <h3>Cocktails Maison</h3>
-            <p>Créations fraîches & raffinées.</p>
+        <div class="explore-grid">
+            <img src="https://img.restoclub.ru/uploads/article/a/9/7/6/a976772cccd81493bf67c442261641b0_w1200_h630--c.jpeg" alt="">
+            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50" alt="">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91" alt="">
+            <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg" alt="">
+            <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg" alt="">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1" alt="">
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section" id="produits">
-    <h2>Produits les Plus Populaires</h2>
-    <div class="grid">
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+        <h3>ARENA LOUNGE – Mazamet, Occitanie</h3>
+        <p>1 Avenue Jean Mermoz, 81200 Mazamet, France</p>
+        <p>Téléphone : <a href="tel:+33780897423">+33 7 80 89 74 23</a></p>
+        <p>Email : <a href="mailto:info@golriva.pw">info@golriva.pw</a></p>
+        <p style="margin-top:10px;font-size:12px;">Ambiance familiale · Cuisine généreuse · Cocktails & Lounge</p>
+        <p style="margin-top:10px;font-size:11px;">© 2025 ARENA LOUNGE. Tous droits réservés.</p>
+    </footer>
 
-        <div class="card">
-            <span class="badge">Best Seller</span>
-            <img src="https://media.zenfs.com/en/Benzinga/36b9a6c6aa1b9ce205f8e82a6b97ff50">
-            <h3>Menu Hot-Dog Classique</h3>
-        </div>
-
-        <div class="card">
-            <span class="badge">Best Seller</span>
-            <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg">
-            <h3>Menu Snack Complet</h3>
-        </div>
-
-        <div class="card">
-            <span class="badge">Best Seller</span>
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91">
-            <h3>Pack Cocktails Maison</h3>
-        </div>
-
-    </div>
-</section>
-
-<section class="section" id="offers">
-    <h2>Offres du Moment</h2>
-    <div class="grid">
-        <div class="card">
-            <span class="badge">Limited Offer</span>
-            <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
-            <h3>Formule Duo</h3>
-        </div>
-
-        <div class="card">
-            <span class="badge">Limited Offer</span>
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1vTyGp.img?w=780&h=438&m=4&q=91">
-            <h3>Happy Hour</h3>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="galerie">
-    <h2>Galerie Photos</h2>
-    <div class="gallery">
-        <img src="https://static.tildacdn.com/tild3063-3065-4238-b738-306630306538/shutterstock_2271215.jpg">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/79/70/11/caption.jpg?w=900&h=500&s=1">
-        <img src="https://i.pinimg.com/originals/21/36/c4/2136c4361ce7821d84aef09c383cb596.jpg">
-    </div>
-</section>
-
-<footer id="contact">
-    <h2>Contact</h2>
-    <p>📍 1 Avenue Jean Mermoz, 81200 Mazamet</p>
-    <p>📞 +33 7 80 89 74 23</p>
-    <p>📧 info@golriva.pw</p>
-    <p>© 2025 ARENA LOUNGE – Tous droits réservés.</p>
-</footer>
-
+</div>
 </body>
 </html>
